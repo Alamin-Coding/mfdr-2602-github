@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing Plans</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class' };
+        // Apply saved/system theme before paint
+        (function () {
+            try {
+                var t = localStorage.getItem('theme');
+                var dark = t ? t === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+                document.documentElement.classList.toggle('dark', dark);
+            } catch (e) { }
+        })();
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-stone-100 text-stone-900 dark:bg-[#1f1616] dark:text-white transition-colors duration-300">
+
+    <!-- Theme toggle -->
+    <button id="themeToggle"
+        class="fixed top-5 right-5 z-50 flex h-11 w-11 items-center justify-center rounded-full border border-stone-300 bg-white text-stone-800 shadow-md transition hover:scale-105 dark:border-white/20 dark:bg-white/10 dark:text-yellow-200"
+        aria-label="Toggle theme">
+        <!-- moon (shown in light mode) -->
+        <svg class="h-5 w-5 dark:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z" />
+        </svg>
+        <!-- sun (shown in dark mode) -->
+        <svg class="hidden h-5 w-5 dark:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="4" />
+            <path stroke-linecap="round"
+                d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4l1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+        </svg>
+    </button>
+    <p></p>
+
+    <section class="mx-auto px-4 max-w-[1265px]  pb-16 pt-6">
+
+        <!-- Heading -->
+        <div class="text-center">
+            <p class="text-[11px] font-medium uppercase tracking-[0.3em] text-red-600 dark:text-red-600">Pricing Plans
+            </p>
+            <h2 class="mt-2 text-[34px] font-extrabold tracking-wide text-stone-900 dark:text-white">Our Affordable
+                Pricing Plans</h2>
+        </div>
+
+
+        <!-- Cards -->
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[19px] xl:gap-6">
+
+            <!-- ===== Card 1 : 3 months ===== -->
+            <div class="min-w-[333px]">
+                <div class="rounded-t bg-[#6b9a88] py-1.5 text-center text-xs font-semibold text-white">
+                    Get Ignite Streaming For $5/Month
+                </div>
+
+                <div class="relative h-[508px] overflow-hidden bg-cover bg-center"
+                    style="background-image:url('https://picsum.photos/seed/plan-three/666/1016')">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-b from-white/55 via-white/80 to-white dark:from-black/30 dark:via-black/55 dark:to-black/80">
+                    </div>
+
+                    <div class="relative flex h-full flex-col items-center px-4 pt-9">
+                        <!-- device image -->
+                        <img src="https://picsum.photos/seed/tv-screen/340/200" alt="TV preview"
+                            class="h-[100px] w-[175px] rounded border-4 border-stone-800 object-cover shadow-xl dark:border-neutral-900" />
+                        <div class="mx-auto -mt-px h-1 w-[90px] rounded-b bg-stone-600"></div>
+
+                        <div class="mt-[38px] text-center">
+                            <p class="text-[13px] font-bold">3 Months</p>
+                            <p class="text-[44px] font-extrabold leading-none text-red-600">$ 34.99</p>
+                            <p class="mt-1 text-[13px] font-medium text-stone-600 dark:text-stone-300">No Auto-renew</p>
+                        </div>
+
+                        <!-- Features -->
+                        <ul
+                            class="mt-6 w-[301px] divide-y divide-stone-300 overflow-hidden rounded-lg bg-white/70 text-[13px] text-stone-700 backdrop-blur-sm dark:divide-white/10 dark:bg-stone-700/60 dark:text-stone-300">
+                            <li class="flex items-center justify-between px-4 py-2.5">Live TV and EPG Guide <span
+                                    class="check on"></span></li>
+                            <li class="flex items-center justify-between px-4 py-2.5">Movies and VOD Shows <span
+                                    class="check on"></span></li>
+                            <li class="flex items-center justify-between px-4 py-2.5">Compatible with all devices <span
+                                    class="check on"></span></li>
+                            <li class="flex items-center justify-between px-4 py-2.5">Anti-Freeze Technology <span
+                                    class="check off"></span></li>
+                            <li class="flex items-center justify-between px-4 py-2.5">PPV and Sports Events <span
+                                    class="check off"></span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="-mt-0 flex justify-center pt-3">
+                    <a href="#"
+                        class="rounded bg-[#f1e08f] px-6 py-2.5 text-xs font-semibold text-stone-900 shadow transition hover:brightness-95">Subscribe
+                        Now</a>
+                </div>
+            </div>
+
+            <!-- ===== Card 2 : 6 months ===== -->
+            <div class="min-w-[333px]">
+                <div class="rounded-t bg-[#6b9a88] py-1.5 text-center text-xs font-semibold text-white">
+                    Get Ignite Streaming For $5/Month
+                </div>
+
+                <div class="relative h-[508px] overflow-hidden bg-cover bg-center"
+                    style="background-image:url('https://picsum.photos/seed/plan-six/666/1016')">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-b from-white/55 via-white/80 to-white dark:from-black/30 dark:via-black/55 dark:to-black/80">
+                    </div>
+
+                    <div class="relative flex h-full flex-col items-center px-4 pt-9">
+                        <!-- device image (laptop + tablet) -->
+                        <div class="relative h-[110px] w-[185px]">
+                            <img src="https://picsum.photos/seed/laptop-screen/340/200" alt="Laptop preview"
+                                class="absolute bottom-3 left-0 h-[75px] w-[125px] rounded-sm border-[3px] border-stone-800 object-cover shadow-xl dark:border-neutral-900" />
+                            <div class="absolute bottom-1.5 left-[-8px] h-1.5 w-[142px] rounded-b-md bg-stone-300">
+                            </div>
+                            <img src="https://picsum.photos/seed/tablet-screen/200/300" alt="Tablet preview"
+                                class="absolute right-0 top-0 h-[100px] w-[65px] rounded-md border-[3px] border-stone-800 object-cover shadow-xl dark:border-neutral-900" />
+                        </div>
+
+                        <div class="mt-[28px] text-center">
+                            <p class="text-[13px] font-bold">6 Months</p>
+                            <p class="text-[44px] font-extrabold leading-none text-red-600">$ 54.99</p>
+                            <p class="mt-1 text-[13px] font-medium text-stone-600 dark:text-stone-300">No Auto-renew</p>
+                        </div>
+
+                        <ul
+                            class="mt-6 w-[301px] divide-y divide-stone-300 overflow-hidden rounded-lg bg-white/70 text-[13px] text-stone-700 backdrop-blur-sm dark:divide-white/10 dark:bg-stone-700/60 dark:text-stone-300">
+                            <li class="flex items-center justify-between px-4 py-2.5">Live TV and EPG Guide <span
+                                    class="check on"></span></li>
+                            <li class="flex items-center justify-between px-4 py-2.5">Movies and VOD Shows <span
+                                    class="check on"></span></li>
+                            <li class="flex items-center justify-between px-4 py-2.5">Compatible with all devices <span
+                                    class="check on"></span></li>
+                            <li class="flex items-center justify-between px-4 py-2.5">Anti-Freeze Technology <span
+                                    class="check off"></span></li>
+                            <li class="flex items-center justify-between px-4 py-2.5">PPV and Sports Events <span
+                                    class="check on"></span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex justify-center pt-3">
+                    <a href="#"
+                        class="rounded bg-[#f1e08f] px-6 py-2.5 text-xs font-semibold text-stone-900 shadow transition hover:brightness-95">Subscribe
+                        Now</a>
+                </div>
+            </div>
+
+            <!-- ===== Card 3 : 12 months ===== -->
+            <div class="min-w-[333px]">
+                <div class="rounded-t bg-[#6b9a88] py-1.5 text-center text-xs font-semibold text-white">
+                    Get Ignite Streaming For $5/Month
+                </div>
+
+                <div class="relative h-[508px] overflow-hidden bg-cover bg-center"
+                    style="background-image:url('https://picsum.photos/seed/plan-twelve/666/1016')">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-b from-white/55 via-white/80 to-white dark:from-black/30 dark:via-black/55 dark:to-black/80">
+                    </div>
+
+                    <div class="relative flex h-full flex-col items-center px-4 pt-9">
+                        <!-- device image (phones + screen) -->
+                        <div class="relative h-[110px] w-[175px]">
+                            <img src="https://picsum.photos/seed/phone-one/160/320" alt="Phone preview"
+                                class="absolute bottom-0 left-0 h-[85px] w-[45px] rounded-md border-2 border-stone-800 object-cover shadow-xl dark:border-neutral-900" />
+                            <img src="https://picsum.photos/seed/phone-two/160/320" alt="Phone preview"
+                                class="absolute bottom-[-8px] left-[48px] h-[65px] w-[30px] rounded-md border-2 border-stone-800 object-cover shadow-xl dark:border-neutral-900" />
+                            <img src="https://picsum.photos/seed/web-screen/320/200" alt="Web preview"
+                                class="absolute right-0 top-2 h-[65px] w-[105px] rounded-sm border-2 border-stone-800 object-cover shadow-xl dark:border-neutral-900" />
+                        </div>
+
+                        <div class="mt-[28px] text-center">
+                            <p class="text-[13px] font-bold">12 Months</p>
+                            <p class="text-[44px] font-extrabold leading-none text-red-600">$ 74.99</p>
+                            <p class="mt-1 text-[13px] font-medium text-stone-600 dark:text-stone-300">No Auto-renew</p>
+                        </div>
+
+                        <ul
+                            class="mt-6 w-[301px] divide-y divide-stone-300 overflow-hidden rounded-lg bg-white/70 text-[13px] text-stone-700 backdrop-blur-sm dark:divide-white/10 dark:bg-stone-700/60 dark:text-stone-300">
+                            <li class="flex items-center justify-between px-4 py-2.5">Live TV and EPG Guide <span
+                                    class="check on"></span></li>
+                            <li class="flex items-center justify-between px-4 py-2.5">Movies and VOD Shows <span
+                                    class="check on"></span></li>
+                            <li class="flex items-center justify-between px-4 py-2.5">Compatible with all devices <span
+                                    class="check on"></span></li>
+                            <li class="flex items-center justify-between px-4 py-2.5">Anti-Freeze Technology <span
+                                    class="check on"></span></li>
+                            <li class="flex items-center justify-between px-4 py-2.5">PPV and Sports Events <span
+                                    class="check on"></span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex justify-center pt-3">
+                    <a href="#"
+                        class="rounded bg-[#f1e08f] px-6 py-2.5 text-xs font-semibold text-stone-900 shadow transition hover:brightness-95">Subscribe
+                        Now</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <style type="text/tailwindcss">
+        @layer components {
+      /* circular check icon */
+      .check {
+        @apply inline-block h-[18px] w-[18px] shrink-0 rounded-full border-[1.5px];
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 10px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b9a88' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 13l4 4L19 7'/%3E%3C/svg%3E");
+      }
+      .check.on  { @apply border-[#6b9a88]; }
+      .check.off { @apply border-[#6b9a88]/30 opacity-40; }
+    }
+  </style>
+
+    <script>
+        document.getElementById('themeToggle').addEventListener('click', function () {
+            var isDark = document.documentElement.classList.toggle('dark');
+            try { localStorage.setItem('theme', isDark ? 'dark' : 'light'); } catch (e) { }
+        });
+    </script>
+</body>
+
+</html>
